@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Local Weather</title>
+    <meta name="description" content="Local Weather">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" href="../favicon.png">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="weather.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300,300italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <header>
+      <button id="menu-button">
+        Menu
+      </button>
+      <a href="../index.html" id="logo">mdhCodes</a>
+      <nav id="nav">
+        <ul id="nav-menu">
+          <li><a href="../index.html" class="selected">Home</a></li>
+          <li><a href="../index.html#portfolio">Portfolio</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="main">
+      <h1>Local Weather</h1>
+      <div id="error"></div>
+      <div id="date"></div>
+      <div id="time"></div>
+      <div id="location"></div>
+      <div id="current-temp"></div>
+      <span>&deg;<a href="#" id="convert-temp" title="Click to convert to Fahrenheit">C</a></span>
+      <div id="description"></div>
+      <div><img id="icon"></div>
+      <div id="sunrise"></div>
+      <div id="sunset"></div>
+      <div id="latitude"></div>
+      <div id="longitude"></div>
+    </section><!-- end main -->
+
+    <footer>
+      <p>Background Photo by: <a href="https://unsplash.com/@patrickian4">Patrick Fore</a></p>
+      <p>Quotes delivered by: <a href="https://market.mashape.com/andruxnet/random-famous-quotes">Andrux API</a></p>
+      <p>© 2016 <a href="http://www.mdhcodes.com/">mdhCodes</a> ♥</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>
+                  

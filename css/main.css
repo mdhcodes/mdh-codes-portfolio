@@ -12,6 +12,7 @@ body {
     font-size: 16px;
     background-color: #f0f0f0;
     color: #333;
+    line-height: 1.4;
 }
 
 ul {
@@ -37,11 +38,17 @@ img {
     width: 100%;
 }
 
+#portfolio,
+#about,
+#contact {
+    padding: 5em 2em;
+}
+
 #portfolio h2,
 #about h2,
 #contact h2 {
     font-weight: 300;
-    padding: 5em 0 0 2em;
+    padding: 0  0 1em 0;
     font-size: 1.875em;
     margin: 0;
 }
@@ -132,7 +139,7 @@ nav li a {
     font-size: 1.875em;
 }
 
-#intro p {
+.intro-img-credit {
     position: absolute;
     bottom: 0.5em;
     left: 0;
@@ -159,7 +166,7 @@ nav li a {
 .project {
     width: 30em;
     height: 42em;
-    margin: 2em;
+    margin: 1em;
     border: 5px solid #eee;
     border-radius: 5px;
     position: relative;
@@ -193,15 +200,14 @@ nav li a {
 }
 
 
-.img-info {
+.img-credit {
     font-size: 0.75em;
     padding: 0.5em 0 0 0;
 }
 
 .p-credit {
-    text-align: center;
-    padding: 0 0 0.5em 0;
     font-size: 0.75em;
+    text-align: center;
 }
 
 
@@ -212,7 +218,7 @@ nav li a {
     height: 50em;
 }
 
-.quote-credit {
+.quote-img-credit {
     float: right;
     padding: 0.5em 1em 0 0;
     font-size: 0.75em;
@@ -235,10 +241,23 @@ blockquote {
     padding: 0 2em 0;
 }
 
+hr {
+    width: 50%;
+    border-top: 1px solid #c8c8c8;
+}
+
 
 /*===== CONTACT =====*/
 
+#contact ul {
+    text-align: center;
+}
 
+.contact {
+    display: inline-block;
+    margin: 1em 2em 0;
+    font-size: 1.25em;
+}
 
 
 /*===== FOOTER =====*/
@@ -266,7 +285,7 @@ footer a:hover {
         margin: 0 3em 0 0;
         padding: 0.8em 0;
     }
-    
+
     #nav-menu {
         padding-bottom: 1em;
     }

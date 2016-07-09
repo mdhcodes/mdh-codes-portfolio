@@ -1,0 +1,187 @@
+/*===== GENERAL =====*/
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    background: #1e3e60 url("../img/weather.jpg") no-repeat fixed center center / cover;
+    color: #fafafa;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #415f7e;
+}
+
+a:hover {
+    border-bottom: 1px dotted;
+}
+
+
+/*===== NAVIGATION =====*/
+
+header {
+    background-color: rgba(238,238, 238, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0 3em;
+    z-index: 1000;
+    border-bottom: 1px solid #c8c8c8;
+    -moz-box-shadow: 0 0 8px #555555;
+    -webkit-box-shadow: 0 0 8px #555555;
+	  box-shadow: 0 0 8px #555555; /* offset-x | offset-y | blur-radius | color */
+}
+
+#menu-button {
+    background-color: #eba678;
+    margin: 0.6em 0 0 0;
+    padding: 0.8em;
+    border: 1px solid #969696;
+    border-radius: 5px;
+    font-size: 1.125em;
+    color: #333;
+    float: right;
+}
+
+#logo {
+    display: inline-block;
+    font-size: 1.75em;
+    font-weight: 300;
+    margin: 0.6em 0 1em 0;
+}
+
+#nav-menu {
+    margin: 1em auto 0;
+    padding: 0.5em 0 0;
+    text-align: center;
+    font-size: 1.125em;
+    font-weight: 300;
+    display: none;
+}
+
+nav li {
+    margin:0 0 2em 0;
+}
+
+nav li a {
+    color: #333;
+    padding: 0.6em;
+}
+
+.selected {
+    font-weight: 700;
+    border-bottom: 1px solid;
+}
+
+#logo:hover {
+    color: #eba678;
+    font-weight: 400;
+}
+
+
+/*===== MAIN =====*/
+
+.main {
+    margin: 10em auto 0;
+    width: 24em;
+    height: 32em;
+    text-align: center;
+    line-height: 2.5;
+    background-color: rgba(1, 31, 41, 0.6);
+    border-radius: 2px;
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+.main h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 2em;
+    margin: 0;
+}
+
+#date,
+#time,
+#location,
+#current-temp,
+#convert-temp,
+#description,
+#sunrise,
+#sunset,
+#latitude,
+#longitude {
+    font-size: 1.125em;
+}
+
+#current-temp,
+#date,
+#time {
+    display: inline-block;
+}
+
+#convert-temp {
+    border: 1px solid;
+    margin: 0 0 0 0.5em;
+    padding: 0.2em 0.5em;
+    border-radius: 3px;
+    box-shadow: 0 0 1px #000;
+    font-weight: 700;
+    color: #fafafa;
+}
+
+
+/*===== FOOTER =====*/
+
+footer {
+    width: 60%;
+    margin:5em auto;
+    text-align: center;
+    padding: 15em 0 0 0;
+    font-size: 12px;
+}
+
+footer p:first-child {
+    float: left;
+}
+
+footer p:nth-child(2) {
+    float: right;
+}
+
+footer a {
+    color: #cbd9e8;
+}
+
+footer a:hover {
+    border-bottom: 1px dotted;
+}
+
+
+/*===== MEDIA QUERIES =====*/
+
+@media screen and (min-width: 56.25em) {
+    nav li {
+        display: inline-block;
+        margin: 0 3em 0 0;
+        padding: 0.8em 0;
+    }
+
+    #nav-menu {
+        padding-bottom: 1em;
+    }
+}
