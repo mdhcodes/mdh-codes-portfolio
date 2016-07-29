@@ -30,16 +30,6 @@ var showHideMenu = function() {
 showHideMenu();
 
 
-/* Highlight .selected #nav-menu link */
-
-$(document).ready(function() {
-    $('#nav-menu li a').click(function() {
-        $('li a').removeClass("selected");
-        $(this).addClass("selected");
-    });
-});
-
-
 /* Get the user's current date */
 
 var getDate = function() {
@@ -124,7 +114,6 @@ var getTime = function() {
 
     var date = new Date();
     var time = date.toLocaleTimeString();
-    var hours = date.getHours();
     document.getElementById("time").innerHTML = time;
 
 };
@@ -142,7 +131,7 @@ var getLocation = function() {
 
         if(req.status === 200 && req.statusText === "OK") {
 
-            var response = JSON.parse(req.responseText);
+            response = JSON.parse(req.responseText);
 
             var latitude = response.latitude;
             var longitude = response.longitude;
@@ -279,18 +268,17 @@ var convertTemp = function(currentTemp) {
 
 var militaryToRegularTime = function(time) {
 
-	  time = time.split(":");
-	  var hours = parseInt(time[0]), minutes = parseInt(time[1]);
-
-	  if(hours > 0 && hours < 12 ) {
-		    return hours + ":" + minutes + "AM";
-	  } else if(hours === 12) {
-		    return hours + ":" + minutes + "PM";
-	  } else if(hours === 0) {
-		    return (hours + 12) + ":" + minutes + "AM";
-	  } else {
-		    return (hours - 12) + ":" + minutes + "PM";
-	  }
+    time = time.split(":");
+    var hours = parseInt(time[0]), minutes = parseInt(time[1]);
+    if(hours > 0 && hours < 12 ) {
+        return hours + ":" + minutes + "AM";
+    } else if(hours === 12) {
+        return hours + ":" + minutes + "PM";
+    } else if(hours === 0) {
+        return (hours + 12) + ":" + minutes + "AM";
+    } else {
+        return (hours - 12) + ":" + minutes + "PM";
+    }
 
 };
 

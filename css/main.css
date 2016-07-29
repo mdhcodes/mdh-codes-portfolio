@@ -48,7 +48,7 @@ img {
 #about h2,
 #contact h2 {
     font-weight: 300;
-    padding: 0  0 1em 1em;
+    padding: 0  0 1em 1.5em;
     font-size: 1.875em;
     margin: 0;
 }
@@ -66,9 +66,9 @@ header {
     padding: 0 3em;
     z-index: 1000;
     border-bottom: 1px solid #c8c8c8;
-    -moz-box-shadow: 0 0 8px #555555;
-    -webkit-box-shadow: 0 0 8px #555555;
-	  box-shadow: 0 0 8px #555555; /* offset-x | offset-y | blur-radius | color */
+    -moz-box-shadow: 0 0 8px #555;
+    -webkit-box-shadow: 0 0 8px #555;
+	  box-shadow: 0 0 8px #555; /* offset-x | offset-y | blur-radius | color */
 }
 
 #menu-button {
@@ -106,11 +106,6 @@ nav li a {
     padding: 0.6em;
 }
 
-.selected {
-    font-weight: 700;
-    border-bottom: 1px solid;
-}
-
 #logo:hover {
     color: #eba678;
     font-weight: 400;
@@ -123,22 +118,33 @@ nav li a {
 #intro {
     position: relative;
     margin: 0 auto;
-    padding: 10em 0 5em;
+    padding: 14em 0 5em;
     background: #d1dae2 url("../img/water.jpg") no-repeat fixed center center / cover;
     text-align: center;
     height: 60em;
+    -moz-box-shadow: 0 0 8px #555;
+    -webkit-box-shadow: 0 0 8px #555;
+	  box-shadow: 0 0 8px #555;
 }
 
 #intro h1,
 #intro h2 {
     padding: 0 1em 0;
     font-weight: 300;
-    font-size: 2.5em; /*3.125em;*/
+    font-size: 2.5em;
     color: #fafafa;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s; /*animate.css fadeInDown*/
 }
 
 #intro h2 {
     font-size: 1.875em;
+}
+
+.separator {
+    width: 50%;
+    border-top: 1px solid #fafafa;
 }
 
 .intro-img-credit {
@@ -148,6 +154,16 @@ nav li a {
     right: 0;
     width: 100%;
     font-size: 0.75em;
+    color: #fafafa;
+}
+
+.intro-img-credit a {
+    color: #fafafa;
+    border-bottom: 1px dotted;
+}
+
+.intro-img-credit a:hover {
+    color: #415f7e;
 }
 
 
@@ -160,12 +176,15 @@ nav li a {
 .flex-box {
     -moz-display: flex;
     -webkit-display: flex;
+    -ms-display: flex;
     display: flex;
     -moz-flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     -moz-justify-content: space-around;
     -webkit-justify-content: space-around;
+    -ms-justify-content: space-around;
     justify-content: space-around;
 }
 
@@ -190,42 +209,10 @@ nav li a {
     z-index: 1000;
 }
 
-.p-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    -moz-transform: perspective(50em) rotateY(0deg);
-    -webkit-transform: perspective(50em) rotateY(0deg);
-    transform: perspective(50em) rotateY(0deg);
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-transition: transform .5s linear 0s;
-    -webkit-transition: transform .5s linear 0s;
-    transition: transform .5s linear 0s; /* property name | duration | timing function | delay */
-}
-
-.p-description {
-    position: absolute;
-    top: 3em;
-    left: 1em;
-    right: 1em;
-    -moz-transform: perspective(50em) rotateY(180deg);
-    -webkit-transform: perspective(50em) rotateY(180deg);
-    transform: perspective(50em) rotateY(180deg);
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-transition: transform .5s linear 0s;
-    -webkit-transition: transform .5s linear 0s;
-    transition: transform .5s linear 0s;
-    font-size: 1.125em;
-}
-
-.img-credit {
-    font-size: 0.75em;
-    padding: 0.5em 0 0 0;
+.p-link {
+    margin: 0.5em 0 0 0;
+    padding: 0 0 0 0.5em;
+    font-size: 1.25em;
 }
 
 .languages {
@@ -234,14 +221,16 @@ nav li a {
     font-size: 1.125em;
 }
 
-.p-link {
-    margin: 0.5em 0 0 0;
-    padding: 0 0 0 0.5em;
-    font-size: 1.25em;
+.p-description {
+    display: none;
 }
 
-.p-info,
-.p-flip {
+.p-description > p {
+    margin: 1em;
+}
+
+.p-more-info,
+.p-less-info {
     position: absolute;
     right: 2em;
     padding: 0.5em;
@@ -250,12 +239,148 @@ nav li a {
     border-radius: 3px;
 }
 
-.p-info {
+.p-more-info {
     margin: 0.5em 0 0 0;
 }
 
+.img-credit {
+    font-size: 0.75em;
+    padding: 0.5em 0 0 0;
+}
 
 .p-credit {
+    font-size: 0.75em;
+    text-align: center;
+}
+
+/*===== RESUME =====*/
+
+#main {
+    max-width: 63em;
+    margin: 0 auto;
+    padding: 10em 1em 4em;
+    font-size: 1.125em;
+    background-color: #ece4d6;
+    -moz-box-shadow: inset 0 0 10px #333;
+    -webkit-box-shadow: inset 0 0 10px #333;
+    box-shadow: inset 0 0 10px #333;
+}
+
+.name,
+.role,
+.contacts,
+.skills {
+    font-weight: 300;
+}
+
+.name {
+    margin-bottom: 0;
+    font-size: 1.625em;
+}
+
+.name,
+.role {
+    display: inline-block;
+}
+
+.role {
+    margin: 0 0 0 0.5em;
+}
+
+.contacts {
+    text-align: center;
+}
+
+.contact1 {
+    margin: 1em 0;
+}
+
+h4.skills-heading {
+    margin-top: 3em;
+}
+
+.skills {
+    margin: 0 0 0.5em 0;
+    font-size: 1.125em;
+    font-weight: 400;
+    text-align: center;
+}
+
+#summary,
+#experience,
+#projects,
+#education,
+#tech-courses {
+    margin: 3em 0 0;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1.125em;
+}
+
+.job-title,
+.school-degree,
+.tech-course-name {
+    font-weight: 700;
+    margin: 2em 0 0;
+}
+
+.job-title {
+    font-style: italic;
+}
+
+.job-description {
+    padding-left: 1em;
+    text-indent: -1em; /* Moves the first line of text to the left and eliminates text wrapping / creates a hanging indent. Thank you A List Apart - http://alistapart.com/article/taminglists */
+}
+
+.job-description:nth-child(1n) { /* 1n or 1n+0 matches every child element */
+    margin: 0 0 0.5em 1em;
+}
+
+.project-title {
+    font-weight: bold;
+    margin: 3em 0 0;
+}
+
+.project-title,
+.project-description {
+    text-align: center;
+}
+
+.project-link {
+    text-align: center;
+}
+
+.project-image {
+    max-width: 20em;
+    margin: 1em auto 0;
+}
+
+#main hr {
+    border: 1px solid #969696;
+}
+
+h4:last-child {
+    text-transform: none;
+    text-align: center;
+}
+
+
+/*===== MAP =====*/
+
+#map {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.credit {
+    margin-top: 2em;
+    padding: 2em 0;
     font-size: 0.75em;
     text-align: center;
 }
@@ -266,22 +391,33 @@ nav li a {
 .quote {
     background: #d1dae2 url("../img/waves.jpg") no-repeat fixed center center / cover;
     height: 40em;
+    -moz-box-shadow: 0 0 8px #555;
+    -webkit-box-shadow: 0 0 8px #555;
+	  box-shadow: 0 0 8px #555;
 }
 
 .quote-img-credit {
     float: right;
     padding: 0.5em 1em 0 0;
     font-size: 0.75em;
+    color: #fafafa;
+}
+
+.quote-img-credit a {
+    color: #fafafa;
+    border-bottom: 1px dotted;
+}
+
+.quote-img-credit a:hover {
+    color: #415f7e;
 }
 
 blockquote {
-    max-width: ;
     margin: 0;
-    /*font-size: 2.5em;*/
     font-size: 2.1875em;
     font-weight: 300;
     color: #fafafa;
-    padding: 5em 2em 0;
+    padding: 2em 2em 0;
     text-align: center;
 }
 
@@ -292,20 +428,30 @@ blockquote {
     padding-bottom: 5em;
 }
 
+#about h3 {
+    font-weight: 300;
+    padding: 0  0 1em 1.5em;
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+
 #about p {
     max-width: 50em;
-    margin: 0 auto;
+    margin: 0 auto 1em;
     padding: 0 2em 0;
     font-size: 1.125em;
 }
 
-hr {
-    width: 50%;
-    border-top: 1px solid #c8c8c8;
-}
-
 
 /*===== CONTACT =====*/
+
+#contact {
+    background: #95A6BA;
+    padding-bottom: 3em;
+    -moz-box-shadow: 0 0 8px #555;
+    -webkit-box-shadow: 0 0 8px #555;
+	  box-shadow: 0 0 8px #555;
+}
 
 #contact h3 {
     font-size: 1.5625em;
@@ -333,8 +479,6 @@ hr {
 .fcc-icon {
     color: #fff;
     font-weight: 700;
-    background: #3f6e92;
-    border: 2px solid #969696;
     border-radius: 5px;
     padding: 0.2em;
 }
@@ -342,7 +486,6 @@ hr {
 .github-icon:hover {
     color: #000;
 }
-
 
 .fcc-icon:hover {
     color: #006400;
@@ -364,13 +507,14 @@ textarea {
 
 textarea {
     height: 10em;
+    padding-top: 0.5em;
 }
 
 .send-email {
     display: block;
-    margin: 0.5em auto;    
+    margin: 0.5em auto;
     padding: 0.5em 1em;
-    border: 1px soild #969696;
+    border: 1px solid #969696;
     border-radius: 5px;
     background-color: #ebcdb8;
     font-size: 1.125em;
@@ -389,6 +533,10 @@ footer {
     font-size: 0.625em;
 }
 
+footer p:first-child {
+    margin: 0 0 0.5em 0;
+}
+
 footer a {
     color: #415f7e;
 }
@@ -400,18 +548,104 @@ footer a:hover {
 
 /*===== MEDIA QUERIES =====*/
 
+@media screen and (min-width: 28.5em) {
+
+     /*Resume*/
+    .skills {
+        width: 5em;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 31.25em) {
+
+    blockquote {
+        padding: 5em 2em 0;
+    }
+}
+
+@media screen and (min-width: 39em) {
+
+    /*Resume*/
+    .contacts {
+        text-align: inherit;
+        padding: 0 1em 0;
+    }
+
+    .contact1 {
+        margin: 0;
+        float: right;
+    }
+
+    .skills {
+        margin: 0 1em 0;
+    }
+
+    .school-location {
+        float: right;
+    }
+
+    .tech-course-dates {
+        float: right;
+    }
+
+    #map {
+        width: 400px;
+        height: 400px;
+    }
+}
+
 @media screen and (min-width: 40em) {
+
+    /*Navigation*/
     #menu-button {
         margin-right: 1em;
     }
-    
+
+    /*Contact*/
     .text-input,
     textarea {
         max-width: 40em;
     }
 }
 
+@media screen and (min-width: 52em) {
+
+    /*Resume*/
+    .job-location,
+    .job-dates {
+        display: inline-block;
+    }
+
+    .job-dates {
+        float: right;
+    }
+
+    .job-description {
+        clear: both;
+    }
+
+    #map {
+        width: 500px;
+        height: 500px;
+    }
+
+    #about h2,
+    #contact h2 {
+        max-width: 30em;
+        margin: 0 auto;
+    }
+
+    #about h3 {
+        max-width: 37.5em;
+        margin: 1em auto 1em;
+    }
+}
+
 @media screen and (min-width: 56.25em) {
+
+    /*Navigation*/
     nav li {
         display: inline-block;
         margin: 0 3em 0 0;
@@ -429,21 +663,32 @@ footer a:hover {
     }
 }
 
+@media screen and (min-width: 68em) {
+
+    #main {
+        padding: 10em 8em 4em;
+    }
+}
+
 @media screen and (min-width: 68.75em) {
+
+    /*Navigation*/
      #menu-button {
         margin-right: 3em;
      }
-     
+
     #logo {
         padding-left: 2em;
     }
 }
 
 @media screen and (min-width: 93.75em) {
+
+    /*Navigation*/
      #menu-button {
         margin-right: 5em;
      }
-     
+
     #logo {
         padding-left: 4em;
     }
