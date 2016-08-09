@@ -13,37 +13,28 @@
     <link rel="stylesheet" href="weather.css">
   </head>
   <body>
-    <header>
-      <button id="menu-button">Menu</button>
-      <a href="../index.html" id="logo">mdhCodes</a>
-      <nav id="nav">
-        <ul id="nav-menu">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../index.html#portfolio">Portfolio</a></li>
-          <li><a href="../resume.html">Resume</a></li>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section class="main">
+    <section class="cloud">
       <h1>Local Weather</h1>
       <div id="error"></div>
       <div id="date"></div>
       <div id="time"></div>
       <div id="location"></div>
-      <div id="current-temp"></div>
-      <span>&deg;<a href="#" id="convert-temp" title="Click to convert to Fahrenheit">C</a></span>
-      <div id="description"></div>
-      <div><img id="icon"></div>
-      <div id="sunrise"></div>
-      <div id="sunset"></div>
-      <div id="latitude"></div>
-      <div id="longitude"></div>
-    </section><!-- end main -->
+      <div class="data">
+        <div class="weather">
+          <div id="current-temp"></div>
+          <span>°<a href="#" id="convert-temp" title="Click to convert to Fahrenheit">C</a></span>
+          <div id="description"></div>
+          <div id="icon"></div>
+        </div><!-- end weather -->
+        <div class="facts">
+          <div id="humidity"></div>
+          <div id="sunrise"></div>
+          <div id="sunset"></div>
+        </div><!-- end facts -->
+      </div><!-- end data -->
+    </section><!-- end cloud -->
     <footer>
-      <p>Background Photo by: <a href="https://unsplash.com/@patrickian4" target="_blank">Patrick Fore</a></p>
-      <p>Quotes delivered by: <a href="https://market.mashape.com/andruxnet/random-famous-quotes" target="_blank">Andrux API</a></p>
+      <p>Weather delivered by: <a href="http://openweathermap.org/api" target="_blank">Open Weather Map</a></p>
       <p>© 2016 <a href="http://www.mdhcodes.com/">mdhCodes</a> ♥</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>

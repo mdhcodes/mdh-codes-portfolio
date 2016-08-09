@@ -51,21 +51,21 @@ var projects = {
         {
             "title": "Spiral Twists",
             "image": "img/platter_small.jpg",
-            "description": "Digital portfolio of my work as a potter",
+            "description": "Digital gallery of wheel thrown and hand built ceramics",
             "href": "http://spiraltwists.com/",
             "link": "Website: www.spiraltwists.com"
         },
         {
             "title": "Random Quotes",
             "image": "img/open_books_small.jpg",
-            "description": "View random quotes on demand and tweet your favorites",
+            "description": "Browse random quotes and tweet your favorites",
             "href": "https://mdhcodes.github.io/random_quotes/",
             "link": "Link: Random Quotes"
         },
         {
             "title": "Local Weather",
-            "image": "img/weather_small.jpg",
-            "description": "See your local weather along with other related information",
+            "image": "img/weather.png",
+            "description": "View your local weather along with other interesting facts",
             "href": "local_weather/weather.html",
             "link": "Link: Local Weather"
         },
@@ -76,7 +76,22 @@ var projects = {
             "href": "http://mdhcodes.com/",
             "link": "Website: www.mdhCodes.com"
         }
-    ]
+    ],
+    "display": function() { // Method - Function belonging to the projects object
+        for(project in projects.projects) { // Loop over the projects array of objects  inside the projects object
+            // Replace the %data% placeholder with the projects object content
+            var title = projectTitle.replace("%data%", projects.projects[project].title);
+            var description = projectDescription.replace("%data%", projects.projects[project].description);
+            var image = projectImage.replace("%data%", projects.projects[project].image);
+            var href = projects.projects[project].href;
+            var link = projects.projects[project].link;            
+            // Insert data from the projects object at the end of the DOM element with ID projects
+            $("#projects").append(title);
+            $("#projects").append(description);
+            $("#projects").append('<p class="project-link"><a href="' + href + ' " target="blank">' + link + ' </a></p>');
+            $("#projects").append(image);
+        }
+    }
 };
 
 var education = {
@@ -110,16 +125,9 @@ var education = {
         {
             "name": "JavaScript: Understanding the Weird Parts ",
             "school": "Udemy",
-            "dates": "July 2016",
+            "dates": "July 2016 - present",
             "href": "https://www.udemy.com/understand-javascript/",
-            "url": "https://www.udemy.com/understand-javascript/"
-        },
-        {
-            "name": "Google Maps APIs",
-            "school": "Udacity",
-            "dates": "July 2016",
-            "href": "https://www.udacity.com/course/google-maps-apis--ud864",
-            "url": "www.udacity.com/google-maps-apis--ud864"
+            "url": "www.udemy.com"
         },
         {
             "name": "Front End Development",
@@ -129,11 +137,18 @@ var education = {
             "url": "www.freecodecamp.com"
         },
         {
+            "name": "Google Maps APIs",
+            "school": "Udacity",
+            "dates": "July 2016",
+            "href": "https://www.udacity.com/course/google-maps-apis--ud864",
+            "url": "www.udacity.com"
+        },
+        {
             "name": "JavaScript Basics",
             "school": "Udacity",
             "dates": "November 2015",
             "href": "https://www.udacity.com/course/javascript-basics--ud804",
-            "url": "www.udacity.com/javascript-basics--ud804"
+            "url": "www.udacity.com"
         },
         {
             "name": "Web Development: Various Courses",
@@ -147,9 +162,39 @@ var education = {
             "school": "Codecademy",
             "dates": "July 2015",
             "href": "https://www.codecademy.com/learn/javascript",
-            "url": "www.codecademy.com/learn/javascript"
+            "url": "www.codecademy.com"
         }
-    ]
+    ],
+    "display": function() { // Method - Function belonging to the education object
+        for(school in education.schools) { // Loop over the schools array of objects inside the education object
+            // Replace the %data% placeholder with education object content
+            var collegeDegree = schoolDegree.replace("%data%", education.schools[school].degree);
+            var collegeMajor = schoolMajor.replace("%data%", education.schools[school].major);
+            var collegeName = schoolName.replace("%data%", education.schools[school].name);
+            var collegeLocation = schoolLocation.replace("%data%", education.schools[school].location);
+            var collegeHref = education.schools[school].href;
+            var collegeUrl = education.schools[school].url;
+            // Insert data from the education object at the end of the DOM element with ID education
+            $("#education").append(collegeDegree);
+            $("#education").append(collegeMajor);
+            $("#education").append(collegeName);
+            $("#education").append(collegeLocation);
+            $("#education").append('<a href=" ' + collegeHref + ' " class="college-url" target="_blank">' + collegeUrl + ' </a>');
+        }
+        for(course in education.techCourses) { // Loop over the techCourses array of objects inside the education object
+            // Replace the %data% placeholder with techCourses object content
+            var className = courseName.replace("%data%", education.techCourses[course].name);
+            var classSchool = courseSchool.replace("%data%", education.techCourses[course].school);
+            var classDates = courseDates.replace("%data%", education.techCourses[course].dates);
+            var classHref = education.techCourses[course].href;
+            var classUrl = education.techCourses[course].url;
+            // Insert data from the education object at the end of the DOM element withID tech-courses
+            $("#tech-courses").append(className);
+            $("#tech-courses").append(classSchool);
+            $("#tech-courses").append(classDates);
+            $("#tech-courses").append('<a href=" ' + classHref + ' " class="course-url" target="_blank">' + classUrl + ' </a>');
+        }
+    }
 };
 
 
@@ -193,59 +238,12 @@ var displayWork = function() { // Function expression
 };
 displayWork();
 
-// Projects
-projects.display = function() { // Method belonging to the projects object
-    for(project in projects.projects) { // Loop over the projects array of objects  inside the projects object
-        // Replace the %data% placeholder with the projects object content
-        var title = projectTitle.replace("%data%", projects.projects[project].title);
-        var description = projectDescription.replace("%data%", projects.projects[project].description);
-        var image = projectImage.replace("%data%", projects.projects[project].image);
-        var href = projects.projects[project].href;
-        var link = projects.projects[project].link;
 
-        // Insert data from the projects object at the end of the DOM element with ID projects
-        $("#projects").append(title);
-        $("#projects").append(description);
-        $("#projects").append('<p class="project-link"><a href="' + href + ' " target="blank">' + link + ' </a></p>');
-        $("#projects").append(image);
-    }
-};
+// Projects
+
 projects.display();
 
 
 // Education
-education.display = function() { // Method belonging to the education object
 
-    for(school in education.schools) { // Loop over the schools array of objects inside the education object
-        // Replace the %data% placeholder with education object content
-        var collegeDegree = schoolDegree.replace("%data%", education.schools[school].degree);
-        var collegeMajor = schoolMajor.replace("%data%", education.schools[school].major);
-        var collegeName = schoolName.replace("%data%", education.schools[school].name);
-        var collegeLocation = schoolLocation.replace("%data%", education.schools[school].location);
-        var collegeHref = education.schools[school].href;
-        var collegeUrl = education.schools[school].url;
-
-        // Insert data from the education object at the end of the DOM element with ID education
-        $("#education").append(collegeDegree);
-        $("#education").append(collegeMajor);
-        $("#education").append(collegeName);
-        $("#education").append(collegeLocation);
-        $("#education").append('<a href=" ' + collegeHref + ' " class="college-url" target="_blank">' + collegeUrl + ' </a>');
-    }
-
-    for(course in education.techCourses) { // Loop over the techCourses array of objects inside the education object
-        // Replace the %data% placeholder with techCourses object content
-        var className = courseName.replace("%data%", education.techCourses[course].name);
-        var classSchool = courseSchool.replace("%data%", education.techCourses[course].school);
-        var classDates = courseDates.replace("%data%", education.techCourses[course].dates);
-        var classHref = education.techCourses[course].href;
-        var classUrl = education.techCourses[course].url;
-
-        // Insert data from the education object at the end of the DOM element withID tech-courses
-        $("#tech-courses").append(className);
-        $("#tech-courses").append(classSchool);
-        $("#tech-courses").append(classDates);
-        $("#tech-courses").append('<a href=" ' + classHref + ' " class="course-url" target="_blank">' + classUrl + ' </a>');
-    }
-};
 education.display();

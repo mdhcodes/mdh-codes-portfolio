@@ -48,8 +48,8 @@
               <button class="p-more-info">More Info</button>
             </div><!-- end p-image -->
             <div class="p-description">
-              <p>Spiral Twists is a digital gallery of my work as a potter. I chose the name for the many spirals found in nature especially those that form in the clay as it is wedged using a technique known as spiral wedging.</p>
-              <p>This is the first website I launched. Since then, I’ve refactored the code and added new functionality to include HTML5 and CSS3 elements along with JavaScript for interactivity and Flexbox for layout. I’ve enjoyed watching my work evolve and I look forward to future upgrades and new projects.</p>
+              <p>Spiral Twists is a digital gallery of my work as a potter.</p>
+              <p>Starting with a mobile first approach, all images were scaled down to improve performance and media queries were added to adjust the layout for different screen sizes. The links change appearance when a user hovers over them to indicate an interaction is possible. CSS3 transition and transform properties animate the gallery categories. JavaScript controls the display of the navigation bar by responding to the user when the menu button is clicked.</p>
               <button class="p-less-info">Less Info</button>
             </div><!-- end p-description-->
           </div><!-- end project -->
@@ -64,22 +64,23 @@
             </div><!-- end p-image -->
             <div class="p-description">
               <p>Random Quotes allows users to browse famous quotes and tweet their favorites.</p>
-              <p>JavaScript requests data from the Andrux Random Famous Quotes API which delivers a response that is parsed to extract the information needed to fulfill the requirements and user stories (what the user should be able to do with the application or website). JavaScript accesses this data and manipulates the DOM to dynamically populate the screen with the selected content.</p>
+              <p>JavaScript requests data from the Andrux Random Famous Quotes API which delivers a response that is parsed to extract the information needed to fulfill the project requirements (website functionality) and user stories (what the user should be able to do when interacting with an application or a website). JavaScript accesses this data and manipulates the DOM to dynamically populate the screen with the selected content.</p>
               <button class="p-less-info">Less Info</button>
             </div><!-- end p-description-->
           </div><!-- end project -->
           <div class="project">
             <p class="p-title">Local Weather</p>
             <div class="p-image">
-              <img src="img/weather_small.jpg" alt="Gray clouds over water">
-              <p class="img-credit">Photo by: <a href="https://unsplash.com/@patrickian4" target="_blank">Patrick Fore</a></p>
+              <img src="img/weather.png" alt="One white cloud in a blue sky">
+              <p class="img-credit">Image by: Michelle Hartley</p>
               <p class="p-link">Link: <a href="local_weather/weather.html" target="_blank">Local Weather</a></p>
+              <!-- <p class="p-link">Link: <a href="http://codepen.io/mdhCodes/full/yJVvMj/" target="_blank">Local Weather</a></p> -->
               <p class="languages">HTML5, CSS3, JavaScript, API</p>
               <button class="p-more-info">More Info</button>
             </div><!-- end p-image -->
             <div class="p-description">
-              <p>Local Weather gathers and displays weather information based on your location. When the page loads, you'll see the current temperature, an image describing the weather, and a few other interesting facts. Click the button next to the temperature and the units will convert from ℃ to ℉ and back.</p>
-              <p>The freegeoip.net API determines your current location and the Open Weather Map API uses the information (latitude and longitude coordinates) to deliver the weather data for your area.</p>
+              <p>Local Weather gathers and displays weather information based on your location. When the page loads, you'll see the current date, the time, your location, the temperature, an image describing the weather, and a few other interesting facts. Click the button next to the temperature and the units will convert from ℃ to ℉ and back.</p>
+              <p>The freegeoip.net API determines your current location and the Open Weather Map API uses that information (latitude and longitude coordinates) to deliver the weather data for your area.</p>
               <button class="p-less-info">Less Info</button>
             </div><!-- end p-description-->
           </div><!-- end project -->
@@ -88,13 +89,13 @@
             <div class="p-image">
               <img src="img/water_small.jpg" alt="Sunrise over water">
               <p class="img-credit">Photo by: <a href="https://unsplash.com/@jonathanbean" target="_blank">Jonathan Bean</a></p>
-              <p class="p-link">Website: <a href="http://mdhcodes.com/">mdhCodes.com</a></p>
+              <p class="p-link">Website: <a href="http://mdhcodes.com/">www.mdhCodes.com</a></p>
               <p class="languages">HTML5, CSS3, JavaScript, jQuery, Flexbox</p>
               <button class="p-more-info">More Info</button>
             </div><!-- end p-image -->
             <div class="p-description">
-              <p>mdhCodes is an ongoing portfolio of my work as a developer. The highlight of building this site was programming the resume page.</p>
-              <p>It was developed using an HTML template to outline the structure of the page, JavaScript objects to store the data, and jQuery to access and append that data to the DOM. The Google Maps API provides a bird’s-eye view of my location along with great places to visit in the area.</p>
+              <p>mdhCodes is an ongoing portfolio of my work as a developer. The highlight of building this site was programming the resume page. It was developed using an HTML template to outline the structure of the page, JavaScript objects to store the data, and jQuery to access and append that data to the DOM. The Google Maps API provides a bird’s-eye view of my location along with great places to visit in the area.</p>
+              <p>I love coding and enjoy watching my work evolve. I look forward to sharing future upgrades and new projects.</p>
               <button class="p-less-info">Less Info</button>
             </div><!-- end p-description-->
           </div><!-- end project -->
@@ -116,7 +117,6 @@
           <p>I enjoy every moment of the development process. My love of computer programming propels me forward and my passion for learning drives me to dig deeper and reach higher every day.</p>
       </section><!-- end about -->
       <section id="contact">
-        <h2>Contact</h2>
         <div class="find-me">
         <h3>Find Me</h3>
         <ul>
@@ -125,10 +125,12 @@
         </ul>
         </div><!-- end find-me -->
         <div class="connect">
-        <h3>Let's Connect</h3>
+        <h3>Contact Me</h3>
         <form action="https://formspree.io/mdhcodes@gmail.com" method="post">
           <input class="text-input" type="text" name="name" placeholder="Full Name">
           <input class="text-input" type="text" name="email" placeholder="Email Address">
+          <input type="hidden" name="_next" value="http://mdhcodes.com/thanks.html"><!--thank you page users see after submitting the form  -->
+          <input type="text" name="_gotcha" style="display:none"><!-- prevent spam -->
           <textarea name="message" placeholder="Message"></textarea>
           <input class="send-email" type="submit" value="Send">
         </form>

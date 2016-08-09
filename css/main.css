@@ -79,6 +79,9 @@ header {
     border-radius: 5px;
     font-size: 1.125em;
     float: right;
+    -moz-transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease; /* property name | duration | timing-function*/
 }
 
 #logo {
@@ -108,8 +111,11 @@ nav li a {
 
 #logo:hover {
     color: #eba678;
-    font-weight: 400;
     border-bottom: none;
+}
+
+#menu-button:hover {
+    background-color: #ebcdb8;
 }
 
 
@@ -181,7 +187,7 @@ nav li a {
     -moz-flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
+    flex-flow: row wrap; /*flex-direction | flex-wrap*/
     -moz-justify-content: space-around;
     -webkit-justify-content: space-around;
     -ms-justify-content: space-around;
@@ -198,6 +204,9 @@ nav li a {
     -moz-box-shadow: 0 0 0.5em #646464;
     -webkit-box-shadow: 0 0 0.5em #646464;
     box-shadow: 0 0 0.5em #646464;
+    -moz-transition: height 0.6s ease;
+    -webkit-transition: height 0.6s ease;
+    transition: height 0.6s ease;
 }
 
 .p-title {
@@ -237,9 +246,13 @@ nav li a {
     background-color: #ebcdb8;
     border: 1px solid #969696;
     border-radius: 3px;
+    -moz-transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
 }
 
-.p-more-info {
+.p-more-info,
+.p-less-info {
     margin: 0.5em 0 0 0;
 }
 
@@ -252,6 +265,12 @@ nav li a {
     font-size: 0.75em;
     text-align: center;
 }
+
+.p-more-info:hover,
+.p-less-info:hover {
+    background-color: #eba678;
+}
+
 
 /*===== RESUME =====*/
 
@@ -436,7 +455,7 @@ blockquote {
 }
 
 #about p {
-    max-width: 50em;
+    max-width: 40em;
     margin: 0 auto 1em;
     padding: 0 2em 0;
     font-size: 1.125em;
@@ -477,10 +496,13 @@ blockquote {
 
 .github-icon,
 .fcc-icon {
-    color: #fff;
+    color: #fafafa;
     font-weight: 700;
     border-radius: 5px;
     padding: 0.2em;
+    -moz-transition: color 0.5s ease;
+    -webkit-transition: color 0.5s ease;
+    transition: color 0.5s ease;
 }
 
 .github-icon:hover {
@@ -513,11 +535,18 @@ textarea {
 .send-email {
     display: block;
     margin: 0.5em auto;
-    padding: 0.5em 1em;
+    padding: 0.6em 2em;
     border: 1px solid #969696;
     border-radius: 5px;
     background-color: #ebcdb8;
     font-size: 1.125em;
+    -moz-transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+.send-email:hover {
+    background-color: #eba678;
 }
 
 .contact a:hover {

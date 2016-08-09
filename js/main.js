@@ -42,7 +42,6 @@ var description = document.getElementsByClassName("p-description");
 var moreInfo = document.getElementsByClassName("p-more-info");
 var lessInfo = document.getElementsByClassName("p-less-info");
 var fadeInClass = "animated fadeInDown";
-var fadeOutClass = "animated fadeOutX";
 var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
 // Display the project descriptions when the moreInfo button is clicked.
@@ -51,28 +50,28 @@ $('.p-more-info').on('click', function() {
     $(this).css("display", "none");
     if(this === moreInfo[0]) {
         $(description[0]).css("display", "block");
-        $(projects[0]).css("height", "46em");
+        $(projects[0]).css("height", "47em");
         $(description[0]).addClass(fadeInClass).one(animationEnd, function() {
             $(description[0]).removeClass(fadeInClass);
         });
     }
     if(this === moreInfo[1]) {
         $(description[1]).css("display", "block");
-        $(projects[1]).css("height", "46em");
+        $(projects[1]).css("height", "47em");
         $(description[1]).addClass(fadeInClass).one(animationEnd, function() {
             $(description[1]).removeClass(fadeInClass);
         });
     }
     if(this === moreInfo[2]) {
         $(description[2]).css("display", "block");
-        $(projects[2]).css("height", "46em");
+        $(projects[2]).css("height", "47em");
         $(description[2]).addClass(fadeInClass).one(animationEnd, function() {
             $(description[2]).removeClass(fadeInClass);
         });
     }
     if(this === moreInfo[3]) {
         $(description[3]).css("display", "block");
-        $(projects[3]).css("height", "46em");
+        $(projects[3]).css("height", "47em");
         $(description[3]).addClass(fadeInClass).one(animationEnd, function() {
             $(description[3]).removeClass(fadeInClass);
         });
