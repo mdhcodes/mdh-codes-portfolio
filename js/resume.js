@@ -36,7 +36,7 @@ var work = {
         },
         {
             "title": "Educator",
-            "location": "Springfield, VA / Vienna, VA / Alexandria, VA / Queens, NY",
+            "location": "Fairfax County, VA / Alexandria, VA / Queens, NY",
             "dates": "November 1991 - June 2003",
             "description1": "Elementary School Assistant Principal; Fairfax County Public Schools, VA",
             "description2": "Special Education Teacher, English 9 and Basic Skills; Fairfax County Public Schools, VA",
