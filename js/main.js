@@ -76,6 +76,13 @@ $('.p-more-info').on('click', function() {
             $(description[3]).removeClass(fadeInClass);
         });
     }
+    if(this === moreInfo[4]) {
+      $(description[4]).css("display", "block");
+      $(projects[4]).css("height", "47em");
+      $(description[4]).addClass(fadeInClass).one(animationEnd, function() {
+        $(description[4]).removeClass(fadeInClass);
+      });
+    }
 });
 
 
@@ -101,5 +108,10 @@ $('.p-less-info').on('click', function() {
         $(moreInfo[3]).css("display", "block");
         $(description[3]).css("display", "none");
         $(projects[3]).css("height", "28em");
+    }
+    if(this === lessInfo[4]) {
+        $(moreInfo[4]).css("display", "block");
+        $(description[4]).css("display", "none");
+        $(projects[4]).css("height", "28em");
     }
 });

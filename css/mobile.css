@@ -63,7 +63,7 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  padding: 0 3em;
+  padding: 0 0.5em;
   z-index: 2000;
   border-bottom: 1px solid #c8c8c8;
   -moz-box-shadow: 0 0 8px #555;
@@ -73,8 +73,7 @@ header {
 
 #menu-button {
   background-color: #eba678;
-  margin: 0.6em 0 0 0;
-  padding: 0.8em;
+  margin: 0.6em 0.5em 0 0;
   padding: 0.4em;
   border: 1px solid #969696;
   border-radius: 5px;
@@ -89,7 +88,7 @@ header {
   display: inline-block;
   font-size: 1.5em;
   font-weight: 300;
-  margin: 0.6em 0 1em 0;
+  margin: 0.6em 0 1em 0.5em;
 }
 
 #nav-menu {
@@ -125,18 +124,18 @@ nav li a {
 #intro {
   position: relative;
   margin: 0 auto;
-  padding: 14em 0 5em;
+  padding: 8em 0 5em;
   background: #d1dae2 url("../img/water.jpg") no-repeat fixed center center / cover;
   text-align: center;
   height: 60em;
   -moz-box-shadow: 0 0 8px #555;
   -webkit-box-shadow: 0 0 8px #555;
-	box-shadow: 0 0 8px #555;
+  box-shadow: 0 0 8px #555;
 }
 
 #intro h1,
 #intro h2 {
-  padding: 0 1em 0;
+  padding: 0 1em;
   font-weight: 300;
   font-size: 2em;
   color: #fafafa;
@@ -160,9 +159,10 @@ nav li a {
 #profile {
   max-width: 40em;
   margin: 0 auto;
-  padding: 5em 1em;
+  padding: 5em 0;
   font-weight: 300;
   font-size: 1.125em;
+  text-align: justify;
 }
 
 #profile h2 {
@@ -171,7 +171,7 @@ nav li a {
 }
 
 #profile p {
-  margin: 0 0 1em 0;
+  margin: 0 1em 1em;
 }
 
 .lets-connect {
@@ -186,7 +186,7 @@ nav li a {
   background-color: #ebcdb8;
 }
 
-.lets-connect:hover {
+.lets-connect {
   background-color: #eba678;
   -moz-transition: background-color 0.5s ease;
   -webkit-transition: background-color 0.5s ease;
@@ -208,35 +208,14 @@ nav li a {
   margin: 0 0 2em 0;
 }
 
-.flex-box {
-  -moz-display: flex;
-  -webkit-display: flex;
-  -ms-display: flex;
-  display: flex;
-  -moz-flex-flow: row wrap;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap; /*flex-direction | flex-wrap*/
-  -moz-justify-content: space-around;
-  -webkit-justify-content: space-around;
-  -ms-justify-content: space-around;
-  justify-content: space-around;
+.project {
+  margin: 1em 0.5em 1.5em;
+  border-bottom: 2px solid;
+  position: relative;
 }
 
-.project {
-  width: 26em;
-  width: 28em;
-  height: 28em;
-  margin: 1em;
-  border: 5px solid #eee;
-  border-radius: 5px;
-  position: relative;
-  -moz-box-shadow: 0 0 0.5em #646464;
-  -webkit-box-shadow: 0 0 0.5em #646464;
-  box-shadow: 0 0 0.5em #646464;
-  -moz-transition: height 0.6s ease;
-  -webkit-transition: height 0.6s ease;
-  transition: height 0.6s ease;
+.project:last-child {
+  border-bottom: none;
 }
 
 .p-title {
@@ -260,35 +239,17 @@ nav li a {
   font-size: 1.125em;
 }
 
-.p-description {
-  display: none;
+.p-description:last-child {
+  margin-bottom: 1.5em;
 }
 
 .p-description > p {
-  margin: 1em;
+  margin: 1em 0.5em;
 }
 
 .p-more-info,
 .p-less-info {
-  position: absolute;
-  right: 2em;
-  padding: 0.5em;
-  background-color: #ebcdb8;
-  border: 1px solid #969696;
-  border-radius: 3px;
-  -moz-transition: background-color 0.5s ease;
-  -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
-}
-
-.p-more-info,
-.p-less-info {
-  margin: 0.5em 0 0 0;
-}
-
-.p-more-info:hover,
-.p-less-info:hover {
-  background-color: #eba678;
+  display: none;
 }
 
 
@@ -420,17 +381,9 @@ h4:last-child {
 
 /*===== MAP =====*/
 
-#location h4 {
-  max-width: 25em;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+#location,
 #map {
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  padding: 0;
+  display: none;
 }
 
 
@@ -458,19 +411,19 @@ blockquote {
 
 #about {
   padding-bottom: 5em;
+  text-align: justify;
 }
 
 #about h3 {
   font-weight: 300;
+  text-align: center;
   font-size: 1.5em;
   margin: 1em 0;
-  text-align: center;
 }
 
 #about p {
   max-width: 40em;
-  margin: 0 auto 1em;
-  padding: 0 2em 0;
+  margin: 1em;
   font-size: 1.125em;
 }
 
@@ -587,163 +540,4 @@ footer a {
 
 footer a:hover {
   border-bottom: 1px dotted;
-}
-
-
-/*===== MEDIA QUERIES =====*/
-
-@media screen and (min-width: 28.5em) {
-
-     /*Resume*/
-    .skills {
-      width: 5em;
-      display: inline-block;
-      text-align: center;
-    }
-}
-
-@media screen and (min-width: 31.25em) {
-
-    blockquote {
-      padding: 5em 2em 0;
-    }
-}
-
-@media screen and (min-width: 39em) {
-
-    /*Resume*/
-    .contacts {
-      text-align: inherit;
-      padding: 0 1em 0;
-    }
-
-    .contact1 {
-      margin: 0;
-      float: right;
-    }
-
-    .skills {
-      margin: 0 1em 0;
-    }
-
-    .school-location {
-      float: right;
-    }
-
-    .tech-course-dates {
-      float: right;
-    }
-
-    #map {
-      width: 400px;
-      height: 400px;
-    }
-}
-
-@media screen and (min-width: 40em) {
-
-    /*Navigation*/
-    #menu-button {
-      margin-right: 1em;
-    }
-
-    /*Contact*/
-    .text-input,
-    textarea {
-      max-width: 40em;
-    }
-}
-
-@media screen and (min-width: 52em) {
-
-    /*Resume*/
-    .job-location,
-    .job-dates {
-      display: inline-block;
-    }
-
-    .job-dates {
-      float: right;
-    }
-
-    .job-description {
-      clear: both;
-    }
-
-    #map {
-      width: 500px;
-      height: 500px;
-    }
-
-    #about h2,
-    #contact h2 {
-      max-width: 30em;
-      margin: 0 auto;
-    }
-
-    #about h3 {
-      max-width: 37.5em;
-      margin: 1em auto 1em;
-    }
-}
-
-@media screen and (min-width: 56.25em) {
-
-    /*Navigation*/
-    nav li {
-      display: inline-block;
-      margin: 0 3em 0 0;
-      padding: 0.8em 0;
-    }
-
-    #nav-menu {
-      padding-bottom: 1em;
-    }
-
-    blockquote {
-      max-width: 42em;
-      margin: 0 auto;
-      font-size: 2.1875em;
-    }
-}
-
-@media screen and (min-width: 68em) {
-
-    #main {
-      padding: 10em 8em 4em;
-    }
-}
-
-@media screen and (min-width: 68.75em) {
-
-    /*Navigation*/
-    #menu-button {
-      margin-right: 3em;
-      padding: 0.8em;
-    }
-
-    #logo {
-      padding-left: 2em;
-      font-size: 1.75em;
-    }
-}
-
-@media screen and (min-width: 93.75em) {
-
-    /*Navigation*/
-    #menu-button {
-      margin-right: 5em;
-    }
-
-    #logo {
-      padding-left: 4em;
-    }
-
-    #intro h1 {
-      font-size: 2.5em;
-    }
-
-    #intro h2 {
-      font-size: 1.875em;
-    }
 }

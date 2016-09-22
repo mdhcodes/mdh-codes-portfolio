@@ -23,7 +23,7 @@ var work = {
             "description1": "Create, update, and manage personal websites",
             "description2": "Hand code, test, and debug HTML, CSS, JavaScript, and jQuery to ensure a deep understanding of web development principles",
             "description3": "Adhere to industry standards while building a code base that is simple yet effective and websites that are user friendly and responsive",
-            "description4": "Familiar with object-oriented programming"
+            "description4": "Familiar with object-oriented and functional programming"
         },
         {
             "title": "Potter",
@@ -53,28 +53,35 @@ var projects = {
             "image": "img/platter_small.jpg",
             "description": "Digital gallery of wheel thrown and hand built ceramics",
             "href": "http://spiraltwists.com/",
-            "link": "Website: www.spiraltwists.com"
+            "link": "Spiral Twists"
         },
         {
             "title": "Random Quotes",
             "image": "img/open_books_small.jpg",
             "description": "Browse random quotes and tweet your favorites",
             "href": "https://mdhcodes.github.io/random_quotes/",
-            "link": "Link: Random Quotes"
+            "link": "Random Quotes"
         },
         {
             "title": "Local Weather",
-            "image": "img/weather.png",
+            "image": "img/cloud.png",
             "description": "View your local weather along with other interesting facts",
-            "href": "local_weather/weather.html",
-            "link": "Link: Local Weather"
+            "href": "https://mdhcodes.github.io/local_weather_wu/",
+            "link": "Local Weather"
+        },
+        {
+            "title": "Wikipedia Viewer",
+            "image": "img/wiki.png",
+            "description": "Search Wikipedia for random information or specific subjects of interest",
+            "href": "https://mdhcodes.github.io/wikipedia_viewer/",
+            "link": "Wikipedia Viewer"
         },
         {
             "title": "mdhCodes",
             "image": "img/water_small.jpg",
             "description": "Ongoing portfolio of my work as a developer",
             "href": "http://mdhcodes.com/",
-            "link": "Website: www.mdhCodes.com"
+            "link": "mdhCodes"
         }
     ],
     "display": function() { // Method - Function belonging to the projects object
@@ -84,11 +91,11 @@ var projects = {
             var description = projectDescription.replace("%data%", projects.projects[project].description);
             var image = projectImage.replace("%data%", projects.projects[project].image);
             var href = projects.projects[project].href;
-            var link = projects.projects[project].link;            
+            var link = projects.projects[project].link;
             // Insert data from the projects object at the end of the DOM element with ID projects
             $("#projects").append(title);
             $("#projects").append(description);
-            $("#projects").append('<p class="project-link"><a href="' + href + ' " target="blank">' + link + ' </a></p>');
+            $("#projects").append('<p class="project-link"><a href="' + href + ' " target="blank"><span class="fa fa-link fa-1x"></span> ' + link + ' </a></p>');
             $("#projects").append(image);
         }
     }
@@ -123,18 +130,18 @@ var education = {
     ],
     "techCourses": [
         {
-            "name": "JavaScript: Understanding the Weird Parts ",
-            "school": "Udemy",
-            "dates": "July 2016 - present",
-            "href": "https://www.udemy.com/understand-javascript/",
-            "url": "www.udemy.com"
-        },
-        {
             "name": "Front End Development",
             "school": "Free Code Camp",
             "dates": "February 2016 - present",
             "href": "https://www.freecodecamp.com/mdhcodes",
             "url": "www.freecodecamp.com"
+        },
+        {
+            "name": "JavaScript: Understanding the Weird Parts ",
+            "school": "Udemy",
+            "dates": "July 2016 - August 2016",
+            "href": "https://www.udemy.com/understand-javascript/",
+            "url": "www.udemy.com"
         },
         {
             "name": "Google Maps APIs",
@@ -204,10 +211,13 @@ $("#header").prepend('<h2 class="name">' + bio.name + '</h2>');
 $("#header").append('<p class="contacts contact1">GitHub: ' + bio.contacts.github + '</p>');
 $("#header").append('<p class="contacts contact2">Email: ' + bio.contacts.email + '</p>');
 $("#header").append('<h4 class="skills-heading">Skills</h4><hr>');
-$("#header").append('<p class="skills">' + bio.skills[0] + '</p>');
-$("#header").append('<p class="skills">' + bio.skills[1] + '</p>');
-$("#header").append('<p class="skills">' + bio.skills[2] + '</p>');
-$("#header").append('<p class="skills">' + bio.skills[3] + '</p>');
+
+var listSkills = function() {
+  for(var i = 0; i < mySkills.length; i++){
+    $("#header").append('<p class="skills">' + bio.skills[i] + '</p>');
+  }
+};
+listSkills();
 
 
 // Summary - Add string stored in the variable mySummary to the DOM element with ID summary

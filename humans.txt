@@ -1,0 +1,23 @@
+# humanstxt.org/
+
+# TEAM
+
+    This website was designed and developed by Michelle Hartley.
+
+# THANKS
+
+    Materialize CSS cards, the inspiration for the Portfolio section of this website.
+    http://materializecss.com/cards.html
+
+    Udacity - JavaScript Basics and Google Maps APIs, the inspiration for the map on the resume page.
+    https://www.udacity.com/course/javascript-basics--ud804 and https://www.udacity.com/course/google-maps-apis--ud864
+
+# TECHNOLOGY UTILIZED
+
+    CSS3, HTML5, JavaScript, jQuery, Normalize.css, Animate CSS, and Font Awesome
+
+# IMAGES / PHOTOS
+
+  water.jpg by Jonathan Bean https://unsplash.com/@jonathanbean
+  open_books_small.jpg by Patrick Tomasso https://unsplash.com/@impatrickt
+  waves.jpg by Austin Schmid https://unsplash.com/@schmidy

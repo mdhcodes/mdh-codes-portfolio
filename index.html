@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>mdhCodes | Web Development</title>
     <meta name="description" content="Michelle Hartley | Web Developer - Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +14,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <!-- Font Awesome by Dave Gandy - http://fontawesome.io -->
     <script src="https://use.fontawesome.com/3a89a414e4.js"></script>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 31.25em)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 31.3125em)" href="css/main.css">
   </head>
   <body>
     <header>
@@ -33,8 +35,15 @@
         <h1 class="animated fadeInDown">Transforming ideas into reality through code</h1>
           <hr class="separator">
         <h2 class="animated fadeInDown">Michelle Hartley | Developer</h2>
-        <p class="intro-img-credit">Photo by: <a href="https://unsplash.com/@jonathanbean" target="_blank">Jonathan Bean</a></p>
       </section><!-- end intro -->
+
+      <section id="profile">
+        <h2>Hi! I’m Michelle,</h2>
+        <p>a self-taught front end developer who enjoys crafting responsive, user friendly websites and web applications. I’m available for new projects and would love the opportunity to work with a team providing optimal solutions for clients.</p>
+        <p>When I’m not coding you’ll find me making pottery, taking an online course, or enjoying a relaxing cup of tea.</p>
+        <a href="#contact" class="lets-connect">Let's Connect!</a>
+      </section>
+      <hr class="separator">
       <section id="portfolio">
         <h2>Portfolio</h2>
         <div class="flex-box">
@@ -42,8 +51,8 @@
             <p class="p-title">Spiral Twists</p>
             <div class="p-image">
               <img src="img/platter_small.jpg" alt="Wood Fired Platter">
-              <p class="img-credit">Photo by: Michelle Hartley</p>
-              <p class="p-link">Website: <a href="http://spiraltwists.com/" target="_blank">www.spiraltwists.com</a></p>
+              <!-- <p class="p-link">Website: <a href="http://spiraltwists.com/" target="_blank">www.spiraltwists.com</a></p> -->
+              <p class="p-link"><a href="http://spiraltwists.com/" target="_blank"><span class="fa fa-link fa-1x"></span> Spiral Twists</a></p>
               <p class="languages">HTML5, CSS3, JavaScript, Flexbox</p>
               <button class="p-more-info">More Info</button>
             </div><!-- end p-image -->
@@ -57,8 +66,8 @@
             <p class="p-title">Random Quotes</p>
             <div class="p-image">
               <img src="img/open_books_small.jpg" alt="Open Books">
-              <p class="img-credit">Photo by: <a href="https://unsplash.com/@impatrickt" target="_blank">Patrick Tomasso</a></p>
-              <p class="p-link">Link: <a href="https://mdhcodes.github.io/random_quotes/" target="_blank">Random Quotes</a></p>
+              <!-- <p class="p-link">Website: <a href="https://mdhcodes.github.io/random_quotes/" target="_blank">Random Quotes</a></p> -->
+              <p class="p-link"><a href="https://mdhcodes.github.io/random_quotes/" target="_blank"><span class="fa fa-link fa-1x"></span> Random Quotes</a></p>
               <p class="languages">HTML5, CSS3, JavaScript, API</p>
               <button class="p-more-info">More Info</button>
             </div><!-- end p-image -->
@@ -71,16 +80,30 @@
           <div class="project">
             <p class="p-title">Local Weather</p>
             <div class="p-image">
-              <img src="img/weather.png" alt="One white cloud in a blue sky">
-              <p class="img-credit">Image by: Michelle Hartley</p>
-              <p class="p-link">Link: <a href="local_weather/weather.html" target="_blank">Local Weather</a></p>
-              <!-- <p class="p-link">Link: <a href="http://codepen.io/mdhCodes/full/yJVvMj/" target="_blank">Local Weather</a></p> -->
+              <img src="img/cloud.png" alt="One white cloud in a blue sky">
+              <!-- <p class="p-link">Website: <a href="https://mdhcodes.github.io/local_weather_wu/" target="_blank">Local Weather</a></p> -->
+              <p class="p-link"><a href="https://mdhcodes.github.io/local_weather_wu/" target="_blank"><span class="fa fa-link fa-1x"></span> Local Weather</a></p>
               <p class="languages">HTML5, CSS3, JavaScript, API</p>
               <button class="p-more-info">More Info</button>
             </div><!-- end p-image -->
             <div class="p-description">
               <p>Local Weather gathers and displays weather information based on your location. When the page loads, you'll see the current date, the time, your location, the temperature, an image describing the weather, and a few other interesting facts. Click the button next to the temperature and the units will convert from ℃ to ℉ and back.</p>
-              <p>The freegeoip.net API determines your current location and the Open Weather Map API uses that information (latitude and longitude coordinates) to deliver the weather data for your area.</p>
+              <p>The geolocation API determines your current location and the Weather Underground API uses that information (latitude and longitude coordinates) to deliver the weather data for your area.</p>
+              <button class="p-less-info">Less Info</button>
+            </div><!-- end p-description-->
+          </div><!-- end project -->
+          <div class="project">
+            <p class="p-title">Wikipedia Viewer</p>
+            <div class="p-image">
+              <img src="img/wiki.png" alt="Wikipedia Logo">
+              <!-- <p class="p-link">Website: <a href="https://mdhcodes.github.io/wikipedia_viewer/" target="_blank">Wikipedia Viewer</a></p> -->
+              <p class="p-link"><a href="https://mdhcodes.github.io/wikipedia_viewer/" target="_blank"><span class="fa fa-link fa-1x"></span> Wikipedia Viewer</a></p>
+              <p class="languages">HTML5, CSS3, JavaScript, API</p>
+              <button class="p-more-info">More Info</button>
+            </div><!-- end p-image -->
+            <div class="p-description">
+              <p>Wikipedia Viewer is a great way to learn something new everyday. This application allows users to view random articles or search for specific information in the Wikipedia database. Users type the name of a subject, place, or person of interest in the search field, press enter or click the search button, and the app returns 15 related Wikipedia entries. The user can then read page snippets and click on a link to view a full page.</p>
+              <p>Wikipedia Viewer uses the MediaWiki API to access the Wikipedia database.</p>
               <button class="p-less-info">Less Info</button>
             </div><!-- end p-description-->
           </div><!-- end project -->
@@ -88,8 +111,8 @@
             <p class="p-title">mdhCodes</p>
             <div class="p-image">
               <img src="img/water_small.jpg" alt="Sunrise over water">
-              <p class="img-credit">Photo by: <a href="https://unsplash.com/@jonathanbean" target="_blank">Jonathan Bean</a></p>
-              <p class="p-link">Website: <a href="http://mdhcodes.com/">www.mdhCodes.com</a></p>
+              <!-- <p class="p-link">Website: <a href="http://mdhcodes.com/">www.mdhCodes.com</a></p> -->
+              <p class="p-link"><a href="http://mdhcodes.com/" target="_blank"><span class="fa fa-link fa-1x"></span> mdhCodes</a></p>
               <p class="languages">HTML5, CSS3, JavaScript, jQuery, Flexbox</p>
               <button class="p-more-info">More Info</button>
             </div><!-- end p-image -->
@@ -100,10 +123,8 @@
             </div><!-- end p-description-->
           </div><!-- end project -->
         </div><!-- end flex-box -->
-        <p class="p-credit">Inspired by: <a href="http://materializecss.com/cards.html#" target="_blank">Materialize Cards</a></p>
       </section><!-- end portfolio -->
       <div class="quote">
-        <p class="quote-img-credit">Photo by: <a href="https://unsplash.com/@schmidy" target="_blank">Austin Schmid</a></p>
         <blockquote>
           <p>"All you are or ever shall become is the result of the use to which you put your mind." – Napoleon Hill</p>
         </blockquote>
@@ -122,6 +143,7 @@
         <ul>
           <li class="contact"><a href="https://github.com/mdhcodes" target="_blank"><span class="fa fa-github fa-3x github-icon"></span></a></li>
           <li class="contact"><a href="https://www.freecodecamp.com/mdhcodes" target="_blank"><span class="fa fa-fire fa-3x fcc-icon"></span></a></li>
+          <li class="contact"><a href="http://codepen.io/mdhCodes/" target="_blank"><span class="fa fa-codepen fa-3x codepen-icon"></span></a></li>
         </ul>
         </div><!-- end find-me -->
         <div class="connect">

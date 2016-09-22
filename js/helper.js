@@ -10,7 +10,7 @@ var workDescription3 = '<li class="job-description">%data%</li>';
 var workDescription4 = '<li class="job-description">%data%</li></ul>';
 
 // Projects
-var projectTitle = '<p class="project-title">%data%</p>';
+var projectTitle = '<h5 class="project-title">%data%</h5>';
 var projectDescription = '<p class="project-description">%data%</p>';
 var projectImage = '<img src=%data% class="project-image">';
 
@@ -31,22 +31,19 @@ var markers = [];
 var initMap = function() {
     // Create a new map
     map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 40.7282239, lng: -73.7948516},
+    center: {lat: 28.5652787 , lng: -81.5861847},
     zoom: 8,
     disableDefaultUI: true // Disables default map actions/options
     });
 
     var locations = [
-        {title: "I'm located in Queens, NY", location: {lat: 40.7282239, lng: -73.7948516}},
-        {title: "Queens Botanical Garden", location: {lat: 40.75029489999999, lng: -73.8294177}},
-        {title: "MoMA PS1", location: {lat: 40.7454823, lng: -73.9473062}},
-        {title: "Flushing Meadows Corona Park", location: {lat: 40.73971359999999, lng: -73.840785}},
-        {title: "Queens Museum", location: {lat: 40.745845, lng: -73.8466777}},
-        {title: "New York Hall Of Science", location: {lat: 40.7471508, lng: -73.8516657}},
-        {title: "Louis Armstrong House Museum", location: {lat: 40.7545844, lng: -73.8615339}},
-        {title: "Socrates Sculpture Park", location: {lat: 40.76850609999999, lng: -73.9364973}},
-        {title: "Queens Zoo", location: {lat: 40.7444337, lng: -73.8497415}},
-        {title: "Lewis Howard Latimer House Museum", location: {lat : 40.7661211, lng : -73.8293949}}
+        {title: "I'm located in Winter Garden, FL", location: {lat: 28.5652787, lng: -81.5861846}},
+        {title: "Epcot Center", location: {lat: 28.3740957, lng: -81.5522407}},
+        {title: "Orlando Museum of Art", location: {lat: 28.572697, lng: -81.365143}},
+        {title: "Orlando Science Center", location: {lat: 28.5722787, lng: -81.3683621}},
+        {title: "Magic Kingdom Park", location: {lat: 28.4197986, lng: -81.5811952}},
+        {title: "Universal Orlando", location: {lat: 28.4730602, lng: -81.46195800000001}},
+        {title: "Kennedy Space Center", location: {lat: 28.5270589, lng: -80.679169}}
     ];
 
     // Create an infowindow
