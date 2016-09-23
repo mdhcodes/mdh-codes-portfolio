@@ -186,7 +186,7 @@ nav li a {
   background-color: #ebcdb8;
 }
 
-.lets-connect {
+.lets-connect:hover {
   background-color: #eba678;
   -moz-transition: background-color 0.5s ease;
   -webkit-transition: background-color 0.5s ease;
