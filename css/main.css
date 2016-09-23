@@ -340,8 +340,10 @@ h4.skills-heading {
 
 .skills {
   margin: 0 0 0.5em 0;
+  width: 5em;
   font-size: 1.125em;
   font-weight: 400;
+  display: inline-block;
   text-align: center;
 }
 
@@ -449,7 +451,7 @@ blockquote {
   font-size: 2em;
   font-weight: 300;
   color: #fafafa;
-  padding: 2em 2em 0;
+  padding: 5em 2em 0;
   text-align: center;
 }
 
@@ -591,23 +593,6 @@ footer a:hover {
 
 
 /*===== MEDIA QUERIES =====*/
-
-@media screen and (min-width: 28.5em) {
-
-     /*Resume*/
-    .skills {
-      width: 5em;
-      display: inline-block;
-      text-align: center;
-    }
-}
-
-@media screen and (min-width: 31.25em) {
-
-    blockquote {
-      padding: 5em 2em 0;
-    }
-}
 
 @media screen and (min-width: 39em) {
 
