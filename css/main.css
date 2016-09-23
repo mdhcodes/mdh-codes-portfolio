@@ -594,7 +594,18 @@ footer a:hover {
 
 /*===== MEDIA QUERIES =====*/
 
-@media screen and (min-width: 39em) {
+@media screen and (min-width: 40em) {
+
+    /*Navigation*/
+    #menu-button {
+      margin-right: 1em;
+    }
+
+    /*Contact*/
+    .text-input,
+    textarea {
+      max-width: 40em;
+    }
 
     /*Resume*/
     .contacts {
@@ -622,20 +633,6 @@ footer a:hover {
     #map {
       width: 400px;
       height: 400px;
-    }
-}
-
-@media screen and (min-width: 40em) {
-
-    /*Navigation*/
-    #menu-button {
-      margin-right: 1em;
-    }
-
-    /*Contact*/
-    .text-input,
-    textarea {
-      max-width: 40em;
     }
 }
 
@@ -692,14 +689,11 @@ footer a:hover {
     }
 }
 
-@media screen and (min-width: 68em) {
+@media screen and (min-width: 68.75em) {
 
     #main {
       padding: 10em 8em 4em;
     }
-}
-
-@media screen and (min-width: 68.75em) {
 
     /*Navigation*/
     #menu-button {
